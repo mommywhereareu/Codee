@@ -1,0 +1,54 @@
+
+classDiagram
+    Guitar -->  Type
+    Type --> Electro 
+    Type --> Acustic
+    Electro --> Diller
+    Acustic --> Diller
+    Buying <-- Diller: 
+    Buying <-- Discount 
+    Discount <-- Diller: 
+class Diller{
+
+        +Martin
+        +Taylor
+        +Yamaha
+        +Larrivee
+        +Fender
+        +Gibson
+        +G&L
+    } 
+
+ class Guitar{
+        +Type
+        +Name
+        +Diller
+        +Amound
+    }
+
+class Discount{
+        =(amount*price)/(75*10)
+    }
+class Electro{
+        +name
+        +color
+        +material
+        +neck width
+        +neck radius
+    } 
+class Buying{
+        +Price
+        +Buying_guitar
+    }
+class Type{
+        +Acustic
+        +Electro
+    }
+ class Acustic{
+        +Name
+        +Color
+        +Material
+        +Width
+        +Radius
+    }
+    
